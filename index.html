@@ -204,3 +204,48 @@
     </div>
 </body>
 </html>
+
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function App() {
+  const [activeTab, setActiveTab] = useState("tab1");
+
+  return (
+    <div className="flex flex-col items-center p-4 min-h-screen bg-gray-100">
+      <Card className="w-full max-w-2xl">
+        <CardContent>
+          <div className="flex justify-center mb-4 gap-2">
+            <Button 
+              variant={activeTab === "tab1" ? "default" : "outline"} 
+              onClick={() => setActiveTab("tab1")}>
+              Aba 1
+            </Button>
+            <Button 
+              variant={activeTab === "tab2" ? "default" : "outline"} 
+              onClick={() => setActiveTab("tab2")}>
+              Aba 2
+            </Button>
+          </div>
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="text-center"
+          >
+            {activeTab === "tab1" ? (
+              <p>Conteúdo da Aba 1</p>
+            ) : (
+              <p>Conteúdo da Aba 2</p>
+            )}
+          </motion.div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+
