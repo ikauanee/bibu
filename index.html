@@ -108,18 +108,6 @@
             background-color: #ECF0F1;
             color: #2C3E50;
         }
-        .personal-message-box {
-            background-color: #5D9CEC;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-            text-align: left;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 750px;
-        }
     </style>
     <script>
         function showTab(tabId) {
@@ -156,9 +144,10 @@
         
         <!-- Abas -->
         <div class="tabs">
-            <span class="tab" onclick="showTab('future-msgs')">Mensagens Futuras</span>
+            <span class="tab" onclick="showTab('frase-do-dia')">Frase do Dia</span>
             <span class="tab" onclick="showTab('curiosidades')">Curiosidades sobre o Bibu</span>
             <span class="tab" onclick="showTab('perguntas')">Perguntas</span>
+            <span class="tab" onclick="showTab('razões-gosto')">Razões pelas quais gosto de você</span>
         </div>
 
         <!-- Tela Inicial -->
@@ -169,30 +158,14 @@
             </div>
         </div>
 
-        <!-- Mensagem Pessoal -->
-        <div class="personal-message-box">
-            <p><strong>Oi, Bibi, essa sou eu quebrando a quarta parede.</strong><br>Queria que soubesse de algumas coisas e queria encontrar uma forma mais descontraída para que soubesse de tudo. Acho que encontrei. Eu não sei se você pensa que estou indo rápido demais ou que estou tentando apressar as coisas, mas queria que soubesse que não tenho pressa para que nada aconteça. Me desculpa se te assusto às vezes, e me desculpa se isso aqui for demais para você. Mas é só o meu jeito de demonstrar que gosto de você, e isso não significa que vou te pedir em casamento, ou em namoro, e muito menos que vou te pedir para assumir um compromisso comigo. Só significa que estou disposta a te conhecer melhor, significa que já estava ficando sem esperança que isso fosse acontecer, mas olha você aqui. E é isso que você significa para mim: esperança. Achei que nunca mais fosse querer seguir em frente, mas espero conseguir com você. Bom, acho que já falei demais. Vou deixar você nas cuidadosas 'mãos' do meu querido amigo Bibu. Até mais, meu bem. Te gosto muito!</p>
-        </div>
-
         <!-- Texto fora do quadrado -->
         <div class="extra-text">
             <p>Vou começar te explicando onde você está navegando e o motivo da minha criação. Minha criadora precisava parar de procrastinar e estudar, mas ela encontrou um pequeno obstáculo no caminho. Você deve conhecer bem, ele se chama "preguiça". Então, ela pensou em uma forma menos tediosa e mais divertida. E, pelo que ela me contou, você tem despertado um grande interesse da parte dela. Por isso, esse site é para você.</p>
-            <p><strong style="color: black;">Razões pelas quais gosto de você:</strong></p>
-            <ul>
-                <li>Você tem o sorriso mais lindo e encantador que eu já vi. Ficaria horas só te observando sorrir.</li>
-                <li>Você tem um senso de humor extremamente duvidoso e eu adoro isso.</li>
-                <li>Adoro como você se preocupa e é gentil com as pessoas ao seu redor.</li>
-                <li>Adoro o seu jeito com as crianças e como você as encanta com tanta facilidade.</li>
-                <li>Você tem uma paixão e uma dedicação admirável pelo que faz.</li>
-                <li>Você é muito ranzinza, e a parte boa nisso é que, inacreditavelmente, gosto até de te ouvir reclamar.</li>
-                <li>Adoro como você faz eu me sentir.</li>
-                <li>Adoro que, antes de você, eu pensei que nunca mais fosse sentir meu coração bater por alguém, e, de algum jeito, ele bate por você.</li>
-            </ul>
         </div>
 
         <!-- Seções -->
-        <div id="future-msgs" class="content-box hidden">
-            <h2>Mensagens Futuras</h2>
+        <div id="frase-do-dia" class="content-box hidden">
+            <h2>Frase do Dia</h2>
             <p>"Espero que essa surpresa tenha feito você sorrir!"</p>
             <p>"Mal posso esperar para compartilhar mais momentos incríveis com você!"</p>
             <p>"Estou te esperando para nossa próxima aventura!"</p>
@@ -216,7 +189,22 @@
             <input type="text" placeholder="Sua resposta...">
         </div>
 
-        <div class="back-home" onclick="showHome()">Voltar para a Página Inicial</div>
+        <div id="razões-gosto" class="content-box hidden">
+            <h2>Razões pelas quais gosto de você</h2>
+            <ul>
+                <li>Você tem o sorriso mais lindo e encantador que eu já vi. Ficaria horas só te observando sorrir.</li>
+                <li>Você tem um senso de humor extremamente duvidoso e eu adoro isso.</li>
+                <li>Adoro como você se preocupa e é gentil com as pessoas ao seu redor.</li>
+                <li>Adoro o seu jeito com as crianças e como você as encanta com tanta facilidade.</li>
+                <li>Você tem uma paixão e uma dedicação admirável pelo que faz.</li>
+                <li>Você é muito ranzinza, e a parte boa nisso é que, inacreditavelmente, gosto até de te ouvir reclamar.</li>
+                <li>Adoro como você faz eu me sentir.</li>
+                <li>Adoro que, antes de você, eu pensei que nunca mais fosse sentir meu coração bater por alguém, e, de algum jeito, ele bate por você.</li>
+            </ul>
+        </div>
+
+        <!-- Botão para voltar à tela inicial -->
+        <div class="back-home" onclick="showHome()">Voltar à Tela Inicial</div>
     </div>
 </body>
 </html>
