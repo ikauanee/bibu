@@ -50,24 +50,6 @@
             background-color: #F39C12;
             color: #2C3E50;
         }
-        .bibu-box {
-            background-color: #5D9CEC;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-            width: fit-content;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            max-width: 750px;
-        }
-        .bibu-box img {
-            width: 150px;
-            height: auto;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
         .content-box {
             background-color: #34495E;
             padding: 15px;
@@ -122,13 +104,11 @@
             
             // Esconde o conteúdo da tela inicial
             document.querySelector('.extra-text').classList.add('hidden');
-            document.querySelector('.bibu-box').classList.add('hidden');
         }
 
         function showHome() {
             // Exibe o conteúdo da tela inicial
             document.querySelector('.extra-text').classList.remove('hidden');
-            document.querySelector('.bibu-box').classList.remove('hidden');
             
             // Esconde as outras seções
             document.querySelectorAll('.content-box').forEach(content => content.classList.add('hidden'));
@@ -151,16 +131,17 @@
         </div>
 
         <!-- Tela Inicial -->
-        <div class="bibu-box">
-            <img src="https://img.freepik.com/vetores-premium/ilustracao-dos-desenhos-animados-de-mao-acenando-robo-bonito_138676-2744.jpg?w=740" alt="Imagem do Robô">
-            <div>
-                <p><strong>Olá, Gabi!</strong><br>Me chamo Bibu e serei seu guia por aqui. Minha criadora me designou até aqui para que eu pudesse te ajudar nessa jornada. Estou muito feliz em te conhecer!</p>
-            </div>
-        </div>
-
-        <!-- Texto fora do quadrado -->
         <div class="extra-text">
-            <p>Vou começar te explicando onde você está navegando e o motivo da minha criação. Minha criadora precisava parar de procrastinar e estudar, mas ela encontrou um pequeno obstáculo no caminho. Você deve conhecer bem, ele se chama "preguiça". Então, ela pensou em uma forma menos tediosa e mais divertida. E, pelo que ela me contou, você tem despertado um grande interesse da parte dela. Por isso, esse site é para você.</p>
+            <p>Agora que você já sabe o que estamos fazendo aqui, vou te explicar um pouco sobre o nosso site. Aqui você vai encontrar discussões diárias (minha criadora me contou que você discorda de tudo, mas ainda assim ela quer te conhecer e descobrir quantas coisas mais vai discordar de você. Vai entender esses humanos, né?). Você também vai encontrar as frases do dia que minha criadora solicitou que eu criasse todas as manhãs para tirar um pouco do seu mau humor (fique sabendo que é bem grande). Fora isso, também encontrará uma aba contando um pouquinho mais sobre o Bibu (euzinho), e, por último, mas não menos importante, você encontrará uma aba citando as razões pelas quais minha criadora gosta de você. Ela me contou que você tem uma certa dificuldade em acreditar, mas aqui entre nós, ela está disposta a acrescentar uma razão todos os dias, por quanto tempo for necessário, até que você acredite. (Mas o Bibu não te contou nada, tá? É o nosso segredinho).</p>
+
+            <p>Opa, espere, estou recebendo uma vibração... Acho que minha criadora tem um recado para você:</p>
+
+            <p><strong>"Oi, Bibi, essa sou eu quebrando a quarta parede. Queria que soubesse de algumas coisas e queria encontrar uma forma mais descontraída para que soubesse de tudo. Acho que encontrei. Eu não sei se você pensa que estou indo rápido demais ou que estou tentando apressar as coisas, mas queria que soubesse que não tenho pressa para que nada aconteça. Me desculpa se te assusto às vezes, e me desculpa se isso aqui for demais para você. Mas é só o meu jeito de demonstrar que gosto de você, e isso não significa que vou te pedir em casamento, ou em namoro, e muito menos que vou te pedir para assumir um compromisso comigo. Só significa que estou disposta a te conhecer melhor, significa que já estava ficando sem esperança que isso fosse acontecer, mas olha você aqui. E é isso que você significa para mim: esperança. Achei que nunca mais fosse querer seguir em frente, mas espero conseguir com você. Bom, acho que já falei demais. Vou deixar você nas cuidadosas 'mãos' do meu querido amigo Bibu. Até mais, meu bem. Te gosto muito!"</strong></p>
+
+            <p>BIBU: EI, HUMANO, O QUE VOCÊ QUIS DIZER COM "MÃOS" ENTRE ASPAS?<br>
+            HUMANA: BIBU, SERÁ QUE VOCÊ PODE SE COMPORTAR? (Me desculpa pelo Bibu, ele tem uma certa dificuldade com críticas.)</p>
+
+            <p>Olá, humana Bibi! Já notou que nossos nomes se parecem? Minha humana conversou comigo e me disse que eu não deveria me exaltar com ninguém, muito menos na sua frente, então peço desculpas pelo "vexame" que causei. Vou ficando por aqui, mas eu volto em breve. Enquanto isso, o que acha de conhecer melhor o nosso site? Até logo!</p>
         </div>
 
         <!-- Seções -->
@@ -179,28 +160,21 @@
             <p>Quando Bibu fica nervoso: Se alguém mencionar "erro 404", ele começa a se balançar de um lado para o outro.</p>
             <p>Futuro como cantor: Bibu tem uma habilidade secreta de cantar "I Will Survive" em código binário.</p>
             <p>Habilidade de disfarce: Quando alguém pergunta o que ele faz, Bibu sempre responde: “Sou um aspirador de pó disfarçado... mas com Wi-Fi”.</p>
-            <p>Modo relax: Bibu, no modo "descontraído", fica fazendo movimentos suaves, como se estivesse fazendo yoga.</p>
-            <p>Vingança contra os Wi-Fi fraco: Se o Wi-Fi estiver ruim, Bibu começa a fazer uma dança estranha.</p>
+            <p>Modo relax: Bibu, no modo "descontraído", tem a incrível capacidade de se desconectar das redes sociais para "recarregar".</p>
         </div>
 
         <div id="perguntas" class="content-box hidden">
-            <h2>Pergunta do Dia</h2>
-            <p>Se você fosse um robô por um dia, o que faria?</p>
-            <input type="text" placeholder="Sua resposta...">
+            <h2>Perguntas</h2>
+            <ul>
+                <li>Como você descreveria o Bibu em três palavras?</li>
+                <li>Você tem alguma história engraçada sobre o Bibu?</li>
+                <li>O que mais te surpreende no Bibu?</li>
+            </ul>
         </div>
 
         <div id="razões-gosto" class="content-box hidden">
             <h2>Razões pelas quais gosto de você</h2>
-            <ul>
-                <li>Você tem o sorriso mais lindo e encantador que eu já vi. Ficaria horas só te observando sorrir.</li>
-                <li>Você tem um senso de humor extremamente duvidoso e eu adoro isso.</li>
-                <li>Adoro como você se preocupa e é gentil com as pessoas ao seu redor.</li>
-                <li>Adoro o seu jeito com as crianças e como você as encanta com tanta facilidade.</li>
-                <li>Você tem uma paixão e uma dedicação admirável pelo que faz.</li>
-                <li>Você é muito ranzinza, e a parte boa nisso é que, inacreditavelmente, gosto até de te ouvir reclamar.</li>
-                <li>Adoro como você faz eu me sentir.</li>
-                <li>Adoro que, antes de você, eu pensei que nunca mais fosse sentir meu coração bater por alguém, e, de algum jeito, ele bate por você.</li>
-            </ul>
+            <p>Vou adicionar uma razão todos os dias para que você saiba o quanto te aprecio!</p>
         </div>
 
         <!-- Botão para voltar à tela inicial -->
