@@ -50,24 +50,6 @@
             background-color: #F39C12;
             color: #2C3E50;
         }
-        .bibu-box {
-            background-color: #5D9CEC;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-            width: fit-content;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            max-width: 750px;
-        }
-        .bibu-box img {
-            width: 150px;
-            height: auto;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
         .content-box {
             background-color: #34495E;
             padding: 15px;
@@ -77,23 +59,6 @@
         }
         .hidden {
             display: none;
-        }
-        .extra-text {
-            color: #fff;
-            text-align: left;
-            padding: 20px;
-            font-size: 1.1em;
-            margin-top: 20px;
-        }
-        .extra-text p {
-            margin-bottom: 15px;
-        }
-        .extra-text ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .extra-text ul li {
-            margin: 5px 0;
         }
         .back-home {
             display: none;
@@ -111,29 +76,12 @@
     </style>
     <script>
         function showTab(tabId) {
-            // Esconde todas as seções
             document.querySelectorAll('.content-box').forEach(content => content.classList.add('hidden'));
-            
-            // Exibe a aba clicada
             document.getElementById(tabId).classList.remove('hidden');
-            
-            // Mostra a opção para voltar à tela inicial
             document.querySelector('.back-home').style.display = 'block';
-            
-            // Esconde o conteúdo da tela inicial
-            document.querySelector('.extra-text').classList.add('hidden');
-            document.querySelector('.bibu-box').classList.add('hidden');
         }
-
         function showHome() {
-            // Exibe o conteúdo da tela inicial
-            document.querySelector('.extra-text').classList.remove('hidden');
-            document.querySelector('.bibu-box').classList.remove('hidden');
-            
-            // Esconde as outras seções
             document.querySelectorAll('.content-box').forEach(content => content.classList.add('hidden'));
-
-            // Esconde a opção de voltar à tela inicial
             document.querySelector('.back-home').style.display = 'none';
         }
     </script>
@@ -141,111 +89,25 @@
 <body>
     <div class="container">
         <h1>Para Minha Bibi</h1>
-        
-        <!-- Abas -->
         <div class="tabs">
-            <span class="tab" onclick="showTab('future-msgs')">Mensagens Futuras</span>
+            <span class="tab" onclick="showTab('daily-quote')">Frase do Dia</span>
             <span class="tab" onclick="showTab('curiosidades')">Curiosidades sobre o Bibu</span>
             <span class="tab" onclick="showTab('perguntas')">Perguntas</span>
         </div>
-
-        <!-- Tela Inicial -->
-        <div class="bibu-box">
-            <img src="https://img.freepik.com/vetores-premium/ilustracao-dos-desenhos-animados-de-mao-acenando-robo-bonito_138676-2744.jpg?w=740" alt="Imagem do Robô">
-            <div>
-                <p><strong>Olá, Gabi!</strong><br>Me chamo Bibu e serei seu guia por aqui. Minha criadora me designou até aqui para que eu pudesse te ajudar nessa jornada. Estou muito feliz em te conhecer!</p>
-            </div>
+        <div id="daily-quote" class="content-box hidden">
+            <h2>Frase do Dia</h2>
+            <p>"A vida é aquilo que acontece enquanto você está ocupado fazendo outros planos." - John Lennon</p>
         </div>
-
-        <!-- Texto fora do quadrado -->
-        <div class="extra-text">
-            <p>Vou começar te explicando onde você está navegando e o motivo da minha criação. Minha criadora precisava parar de procrastinar e estudar, mas ela encontrou um pequeno obstáculo no caminho. Você deve conhecer bem, ele se chama "preguiça". Então, ela pensou em uma forma menos tediosa e mais divertida. E, pelo que ela me contou, você tem despertado um grande interesse da parte dela. Por isso, esse site é para você.</p>
-            <p><strong style="color: black;">Razões pelas quais gosto de você:</strong></p>
-            <ul>
-                <li>Você tem o sorriso mais lindo e encantador que eu já vi. Ficaria horas só te observando sorrir.</li>
-                <li>Você tem um senso de humor extremamente duvidoso e eu adoro isso.</li>
-                <li>Adoro como você se preocupa e é gentil com as pessoas ao seu redor.</li>
-                <li>Adoro o seu jeito com as crianças e como você as encanta com tanta facilidade.</li>
-                <li>Você tem uma paixão e uma dedicação admirável pelo que faz.</li>
-                <li>Você é muito ranzinza, e a parte boa nisso é que, inacreditavelmente, gosto até de te ouvir reclamar.</li>
-                <li>Adoro como você faz eu me sentir.</li>
-                <li>Adoro que, antes de você, eu pensei que nunca mais fosse sentir meu coração bater por alguém, e, de algum jeito, ele bate por você.</li>
-            </ul>
-        </div>
-
-        <!-- Seções -->
-        <div id="future-msgs" class="content-box hidden">
-            <h2>Mensagens Futuras</h2>
-            <p>"Espero que essa surpresa tenha feito você sorrir!"</p>
-            <p>"Mal posso esperar para compartilhar mais momentos incríveis com você!"</p>
-            <p>"Estou te esperando para nossa próxima aventura!"</p>
-            <p>"Você já sabe o quanto você é importante para mim!"</p>
-            <p>"Você vai sempre encontrar apoio em mim!"</p>
-        </div>
-
         <div id="curiosidades" class="content-box hidden">
             <h2>Curiosidades sobre o Bibu</h2>
-            <p>O grande mistério do café: Bibu adora café, mas ninguém sabe como ele consegue tomar sem ter boca.</p>
-            <p>Quando Bibu fica nervoso: Se alguém mencionar "erro 404", ele começa a se balançar de um lado para o outro.</p>
-            <p>Futuro como cantor: Bibu tem uma habilidade secreta de cantar "I Will Survive" em código binário.</p>
-            <p>Habilidade de disfarce: Quando alguém pergunta o que ele faz, Bibu sempre responde: “Sou um aspirador de pó disfarçado... mas com Wi-Fi”.</p>
-            <p>Modo relax: Bibu, no modo "descontraído", fica fazendo movimentos suaves, como se estivesse fazendo yoga.</p>
-            <p>Vingança contra os Wi-Fi fraco: Se o Wi-Fi estiver ruim, Bibu começa a fazer uma dança estranha.</p>
+            <p>Bibu adora café, mas ninguém sabe como ele consegue tomar sem ter boca.</p>
         </div>
-
         <div id="perguntas" class="content-box hidden">
             <h2>Pergunta do Dia</h2>
             <p>Se você fosse um robô por um dia, o que faria?</p>
             <input type="text" placeholder="Sua resposta...">
         </div>
-
-        <!-- Botão para voltar à tela inicial -->
         <div class="back-home" onclick="showHome()">Voltar à Tela Inicial</div>
     </div>
 </body>
 </html>
-
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-
-export default function App() {
-  const [activeTab, setActiveTab] = useState("tab1");
-
-  return (
-    <div className="flex flex-col items-center p-4 min-h-screen bg-gray-100">
-      <Card className="w-full max-w-2xl">
-        <CardContent>
-          <div className="flex justify-center mb-4 gap-2">
-            <Button 
-              variant={activeTab === "tab1" ? "default" : "outline"} 
-              onClick={() => setActiveTab("tab1")}>
-              Aba 1
-            </Button>
-            <Button 
-              variant={activeTab === "tab2" ? "default" : "outline"} 
-              onClick={() => setActiveTab("tab2")}>
-              Aba 2
-            </Button>
-          </div>
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="text-center"
-          >
-            {activeTab === "tab1" ? (
-              <p>Conteúdo da Aba 1</p>
-            ) : (
-              <p>Conteúdo da Aba 2</p>
-            )}
-          </motion.div>
-        </CardContent>
-      </Card>
-    </div>
-  );
-}
-
