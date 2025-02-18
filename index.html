@@ -1,199 +1,97 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Minha Bibi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lobster&display=swap" rel="stylesheet">
+    <title>Mensagem para Bibi</title>
     <style>
         body {
-            background-color: #2C3E50;
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
             margin: 0;
             padding: 0;
-            text-align: center;
-            color: #ECF0F1;
-            background-image: url('https://www.transparenttextures.com/patterns/basketweave.png');
-            background-repeat: repeat;
         }
         .container {
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 85%;
-            max-width: 800px;
-            background-color: transparent;
-            margin: auto;
-        }
-        h1 {
-            font-family: 'Lobster', sans-serif;
-            font-size: 2.5em;
-            color: #F39C12;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .tabs {
-            display: flex;
-            justify-content: center;
-            background-color: #34495E;
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .tab {
-            padding: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            color: white;
-            text-decoration: none;
-        }
-        .tab:hover {
-            background-color: #F39C12;
-            color: #2C3E50;
-        }
-        .bibu-box {
-            background-color: #5D9CEC;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 1000px;
             margin: 20px auto;
-            width: fit-content;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            max-width: 750px;
-        }
-        .bibu-box img {
-            width: 150px;
-            height: auto;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
-        .content-box {
-            background-color: #34495E;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        .hidden {
-            display: none;
-        }
-        .extra-text {
-            color: #fff;
-            text-align: left;
+            background-color: #fff;
             padding: 20px;
-            font-size: 1.1em;
-            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .extra-text p {
-            margin-bottom: 15px;
+        .message-box {
+            background-color: #fffae6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .extra-text ul {
-            list-style-type: none;
-            padding: 0;
+        .message-box h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
         }
-        .extra-text ul li {
-            margin: 5px 0;
+        .message-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .message-box .author {
+            font-style: italic;
+            color: #888;
         }
         .back-home {
-            display: none;
-            padding: 10px;
-            background-color: #F39C12;
-            color: #2C3E50;
-            border-radius: 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px;
         }
         .back-home:hover {
-            background-color: #ECF0F1;
-            color: #2C3E50;
+            background-color: #45a049;
         }
-        .personal-message-box {
-            background-color: #5D9CEC;
+        .message-box-second {
+            background-color: #d1e7dd;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-            text-align: left;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 750px;
-            line-height: 1.6;
-            font-size: 1.1em;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .message-box-third {
+            background-color: #e2f0cb;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
-    <script>
-        function showTab(tabId) {
-            // Esconde todas as seções
-            document.querySelectorAll('.content-box').forEach(content => content.classList.add('hidden'));
-            
-            // Exibe a aba clicada
-            document.getElementById(tabId).classList.remove('hidden');
-            
-            // Mostra a opção para voltar à tela inicial
-            document.querySelector('.back-home').style.display = 'block';
-            
-            // Esconde o conteúdo da tela inicial
-            document.querySelector('.extra-text').classList.add('hidden');
-            document.querySelector('.bibu-box').classList.add('hidden');
-        }
-
-        function showHome() {
-            // Exibe o conteúdo da tela inicial
-            document.querySelector('.extra-text').classList.remove('hidden');
-            document.querySelector('.bibu-box').classList.remove('hidden');
-            
-            // Esconde as outras seções
-            document.querySelectorAll('.content-box').forEach(content => content.classList.add('hidden'));
-
-            // Esconde a opção de voltar à tela inicial
-            document.querySelector('.back-home').style.display = 'none';
-        }
-    </script>
 </head>
 <body>
+
     <div class="container">
-        <h1>Para Minha Bibi</h1>
-        
-        <!-- Abas -->
-        <div class="tabs">
-            <span class="tab" onclick="showTab('future-msgs')">Mensagens Futuras</span>
-            <span class="tab" onclick="showTab('curiosidades')">Curiosidades sobre o Bibu</span>
-            <span class="tab" onclick="showTab('perguntas')">Perguntas</span>
+        <!-- Primeira mensagem (quadrado 1) -->
+        <div class="message-box">
+            <h2>Oi, Bibi, essa sou eu quebrando a quarta parede</h2>
+            <p>Queria que soubesse de algumas coisas e queria encontrar uma forma mais descontraída para que soubesse de tudo. Acho que encontrei. Eu não sei se você pensa que estou indo rápido demais ou que estou tentando apressar as coisas, mas queria que soubesse que não tenho pressa para que nada aconteça. Me desculpa se te assusto às vezes, e me desculpa se isso aqui for demais para você. Mas é só o meu jeito de demonstrar que gosto de você, e isso não significa que vou te pedir em casamento, ou em namoro, e muito menos que vou te pedir para assumir um compromisso comigo. Só significa que estou disposta a te conhecer melhor, significa que já estava ficando sem esperança que isso fosse acontecer, mas olha você aqui. E é isso que você significa para mim: esperança. Achei que nunca mais fosse querer seguir em frente, mas espero conseguir com você. Bom, acho que já falei demais. Vou deixar você nas cuidadosas 'mãos' do meu querido amigo Bibu. Até mais, meu bem. Te gosto muito!</p>
         </div>
 
-        <!-- Tela Inicial -->
-        <div class="bibu-box">
-            <img src="https://img.freepik.com/vetores-premium/ilustracao-dos-desenhos-animados-de-mao-acenando-robo-bonito_138676-2744.jpg?w=740" alt="Imagem do Robô">
-            <div>
-                <p><strong>Olá, Gabi!</strong><br>Me chamo Bibu e serei seu guia por aqui. Minha criadora me designou até aqui para que eu pudesse te ajudar nessa jornada. Estou muito feliz em te conhecer!</p>
-            </div>
+        <!-- Segunda mensagem (quadrado 2) -->
+        <div class="message-box-second">
+            <p><strong>BIBU:</strong> EI, HUMANO, O QUE VOCÊ QUIS DIZER COM "MÃOS" ENTRE ASPAS?</p>
+            <p><strong>HUMANA:</strong> BIBU, SERÁ QUE VOCÊ PODE SE COMPORTAR? (Me desculpa pelo Bibu, ele tem uma certa dificuldade com críticas.)</p>
         </div>
 
-        <!-- Mensagem Pessoal -->
-        <div class="personal-message-box">
-            <p><strong>Oi, Bibi, essa sou eu quebrando a quarta parede.</strong><br>Queria que soubesse de algumas coisas e queria encontrar uma forma mais descontraída para que soubesse de tudo. Acho que encontrei. Eu não sei se você pensa que estou indo rápido demais ou que estou tentando apressar as coisas, mas queria que soubesse que não tenho pressa para que nada aconteça. Me desculpa se te assusto às vezes, e me desculpa se isso aqui for demais para você. Mas é só o meu jeito de demonstrar que gosto de você, e isso não significa que vou te pedir em casamento, ou em namoro, e muito menos que vou te pedir para assumir um compromisso comigo. Só significa que estou disposta a te conhecer melhor, significa que já estava ficando sem esperança que isso fosse acontecer, mas olha você aqui. E é isso que você significa para mim: esperança. Achei que nunca mais fosse querer seguir em frente, mas espero conseguir com você. Bom, acho que já falei demais. Vou deixar você nas cuidadosas 'mãos' do meu querido amigo Bibu. Até mais, meu bem. Te gosto muito!</p>
+        <!-- Terceira mensagem (quadrado 3) -->
+        <div class="message-box-third">
+            <h2>Olá, humana Bibi!</h2>
+            <p>Já notou que nossos nomes se parecem? Minha humana conversou comigo e me disse que eu não deveria me exaltar com ninguém, muito menos na sua frente, então peço desculpas pelo "vexame" que causei. Vou ficando por aqui, mas eu volto em breve. Enquanto isso, o que acha de conhecer melhor o nosso site? Até logo!</p>
         </div>
 
-        <!-- Texto fora do quadrado -->
-        <div class="extra-text">
-            <p>Vou começar te explicando onde você está navegando e o motivo da minha criação. Minha criadora precisava parar de procrastinar e estudar, mas ela encontrou um pequeno obstáculo no caminho. Você deve conhecer bem, ele se chama "preguiça". Então, ela pensou em uma forma menos tediosa e mais divertida. E, pelo que ela me contou, você tem despertado um grande interesse da parte dela. Por isso, esse site é para você.</p>
-            <p><strong style="color: black;">Razões pelas quais gosto de você:</strong></p>
-            <ul>
-                <li>Você tem o sorriso mais lindo e encantador que eu já vi. Ficaria horas só te observando sorrir.</li>
-                <li>Você tem um senso de humor extremamente duvidoso e eu adoro isso.</li>
-                <li>Adoro como você se preocupa e é gentil com as pessoas ao seu redor.</li>
-                <li>Adoro o seu jeito com as crianças e como você as encanta com tanta facilidade.</li>
-                <li>Você tem uma paixão e uma dedicação admirável pelo que faz.</li>
-                <li>Você é muito ranzinza, e a parte boa nisso é que, inacreditavelmente, gosto até de te ouvir reclamar.</li>
-                <li>Adoro como você faz eu me sentir.</li>
-                <li>Porque você me surpreende a cada segundo e me faz querer descobrir cada detalhe sobre você.</li>
-            </ul>
-        </div>
-        
         <!-- Voltar -->
-        <div class="back-home" onclick="showHome()">Voltar para a Página Inicial</div>
+        <div class="back-home" onclick="window.history.back()">Voltar para a Página Inicial</div>
     </div>
+
 </body>
 </html>
