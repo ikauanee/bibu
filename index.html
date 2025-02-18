@@ -144,7 +144,7 @@
         
         <!-- Abas -->
         <div class="tabs">
-            <span class="tab" onclick="showTab('future-msgs')">Mensagens Futuras</span>
+            <span class="tab" onclick="showTab('future-msgs')">Frase do dia</span>
             <span class="tab" onclick="showTab('curiosidades')">Curiosidades sobre o Bibu</span>
             <span class="tab" onclick="showTab('perguntas')">Perguntas</span>
         </div>
@@ -175,8 +175,8 @@
 
         <!-- Seções -->
         <div id="future-msgs" class="content-box hidden">
-            <h2>Frase do Dia</h2>
-            <p>"Volte aqui depois, talvez tenha novida"</p>
+            <h2>Mensagem do dia</h2>
+            <p>"Espero que essa surpresa tenha feito você sorrir!"</p>
             <p>"Mal posso esperar para compartilhar mais momentos incríveis com você!"</p>
             <p>"Estou te esperando para nossa próxima aventura!"</p>
             <p>"Você já sabe o quanto você é importante para mim!"</p>
@@ -204,48 +204,3 @@
     </div>
 </body>
 </html>
-
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-
-export default function App() {
-  const [activeTab, setActiveTab] = useState("tab1");
-
-  return (
-    <div className="flex flex-col items-center p-4 min-h-screen bg-gray-100">
-      <Card className="w-full max-w-2xl">
-        <CardContent>
-          <div className="flex justify-center mb-4 gap-2">
-            <Button 
-              variant={activeTab === "tab1" ? "default" : "outline"} 
-              onClick={() => setActiveTab("tab1")}>
-              Aba 1
-            </Button>
-            <Button 
-              variant={activeTab === "tab2" ? "default" : "outline"} 
-              onClick={() => setActiveTab("tab2")}>
-              Aba 2
-            </Button>
-          </div>
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="text-center"
-          >
-            {activeTab === "tab1" ? (
-              <p>Conteúdo da Aba 1</p>
-            ) : (
-              <p>Conteúdo da Aba 2</p>
-            )}
-          </motion.div>
-        </CardContent>
-      </Card>
-    </div>
-  );
-}
-
