@@ -119,79 +119,6 @@
     color: #ECF0F1;
     max-width: 750px;
 }
-         /* Estilos para telas pequenas (como celulares) */
-        @media (max-width: 600px) {
-            body {
-                font-size: 16px;
-                padding: 10px;
-            }
-
-            .container {
-                width: 100%;
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            .tabs {
-                flex-direction: column;
-                gap: 5px;
-            }
-
-            .tab {
-                margin: 5px 0;
-                padding: 15px;
-            }
-
-            .bibu-box img {
-                width: 100px;
-                margin-right: 10px;
-            }
-
-            .blue-box, .bibu-box, .extra-text, .content-box {
-                padding: 15px;
-                font-size: 0.9em;
-            }
-
-            .back-home {
-                font-size: 1em;
-            }
-        }
-
-        /* Estilos para tablets (telas médias) */
-        @media (max-width: 768px) {
-            .tabs {
-                flex-direction: row;
-                justify-content: space-around;
-            }
-
-            .tab {
-                padding: 12px 20px;
-            }
-        }
-
-        #response-form input, #response-form button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-        }
-
-        #response-form button {
-            background-color: #F39C12;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.content-box').forEach(content => content.classList.add('hidden'));
-            document.getElementById(tabId).classList.remove('hidden');
-            document.querySelector('.back-home').style.display = 'block';
-            document.querySelector('.extra-text').classList.add('hidden');
-            document.querySelector('.bibu-box').classList.add('hidden');
-        }
 
     </style>
     <script>
@@ -345,6 +272,5 @@
     </div>
 </body>
 </html>
-
 
 
