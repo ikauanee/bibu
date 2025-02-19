@@ -119,6 +119,66 @@
     color: #ECF0F1;
     max-width: 750px;
 }
+        /* Responsividade das Abas */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab {
+        margin-bottom: 10px;
+    }
+
+    .bibu-box img {
+        width: 120px; /* Ajuste a largura para ficar proporcional em telas menores */
+        height: auto;
+    }
+
+    .extra-text {
+        font-size: 1em; /* Ajuste de texto para telas pequenas */
+    }
+
+    .content-box {
+        padding: 10px; /* Menos padding para tela pequena */
+    }
+}
+
+/* Ajustes gerais de layout */
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+function showTab(tabId) {
+    // Esconde todas as seções
+    document.querySelectorAll('.content-box').forEach(content => content.classList.add('hidden'));
+    
+    // Exibe a aba clicada
+    document.getElementById(tabId).classList.remove('hidden');
+    
+    // Mostra a opção para voltar à tela inicial
+    document.querySelector('.back-home').style.display = 'block';
+    
+    // Esconde o conteúdo da tela inicial
+    document.querySelector('.extra-text').classList.add('hidden');
+    document.querySelector('.bibu-box').classList.add('hidden');
+}
+
+function showHome() {
+    // Exibe o conteúdo da tela inicial
+    document.querySelector('.extra-text').classList.remove('hidden');
+    document.querySelector('.bibu-box').classList.remove('hidden');
+    
+    // Esconde as outras seções
+    document.querySelectorAll('.content-box').forEach(content => content.classList.add('hidden'));
+
+    // Esconde a opção de voltar à tela inicial
+    document.querySelector('.back-home').style.display = 'none';
+}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     </style>
     <script>
