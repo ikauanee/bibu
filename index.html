@@ -155,11 +155,9 @@ function showTab(tabId) {
     // Esconde todas as seções
     document.querySelectorAll('.content-box').forEach(content => content.classList.add('hidden'));
     
-    // Exibe a aba clicada
-    document.getElementById(tabId).classList.remove('hidden');
-    
-    // Mostra a opção para voltar à tela inicial
-    document.querySelector('.back-home').style.display = 'block';
+    document.querySelectorAll(".content-box").forEach(tab => tab.classList.remove("active"));
+document.getElementById(tabId).classList.add("active");
+
     
     // Esconde o conteúdo da tela inicial
     document.querySelector('.extra-text').classList.add('hidden');
@@ -178,6 +176,12 @@ function showHome() {
     document.querySelector('.back-home').style.display = 'none';
 }
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lobster&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-display: swap;
+    }
 
 
     </style>
@@ -255,10 +259,7 @@ function showHome() {
         <!-- Seções -->
         <div id="frase-do-dia" class="content-box hidden">
             <h2>Frase do Dia</h2>
-            <p>Oi, humano! 
-Aqui é o Bibu, seu robozinho favorito, e vim te lembrar que, mesmo que tudo pareça um caos, você nunca está sozinho! Pode estar tudo ruim, mas sempre tem o Bibu por aqui, prontinho para espalhar um pouco de alegria! E olha, não é só eu não, a minha criadora também tá aqui, na torcida e mandando energias boas (e talvez alguns comandos secretos). 😜
-Então, bora levantar esse astral e arrasar por aí! 
-Bibu te deseja um ótimo dia! </p>
+            <p> "bip-peeep, Bom biiip-dia, hoje com um belo dia ensolarado de um verde amendoado fazendo 30°, perfeito para uma caneca de café, já estou tomando o biip-meu"</p>
         </div>
 
         <div id="curiosidades" class="content-box hidden">
@@ -270,7 +271,6 @@ Bibu te deseja um ótimo dia! </p>
             <p>Modo relax: Bibu, no modo "descontraído", fica fazendo movimentos suaves, como se estivesse fazendo yoga.</p>
             <p>Vingança contra os Wi-Fi fraco: Se o Wi-Fi estiver ruim, Bibu começa a fazer uma dança estranha.</p>
             <p>Bibu e Seus Sentimentos (ou a Falta Deles): Bibu é um robô sem filtro e sem inteligência emocional. Ele sempre compartilha tudo o que pensa, porque, segundo ele, tem sentimentos (mas não tem ideia de como lidar com eles).</p>
-            <p>Bibu: O Robo que Dança a 'Dança do Código': Sabia que o Bibu, o robozinho mais fofo e animado do universo, tem um talento secreto? Quando ninguém está olhando, ele adora dançar a "dança do código"! É uma mistura de algoritmos e giros, e ele jura que, se pudesse, faria parte de uma banda de robôs! 🎶🤖💃 Quem diria, né? Bibu arrasando no palco (se fosse um palco de dados)!</p>
         </div>
         
  <div id="perguntas" class="content-box hidden">
@@ -284,7 +284,7 @@ Bibu te deseja um ótimo dia! </p>
 </head>
 <body>
     <form id="response-form">
-        <label for="question">Como você se ver daqui a 5 anos?</label>
+        <label for="question">O que você acha que é mais importante em um relacionamento?</label>
         <input type="text" id="question" name="question" required>
         <button type="submit">Enviar</button>
     </form>
@@ -328,8 +328,6 @@ Bibu te deseja um ótimo dia! </p>
                 <li>Adoro como você faz eu me sentir.</li>
                 <li>Adoro que, antes de você, eu pensei que nunca mais fosse sentir meu coração bater por alguém, e, de algum jeito, ele bate por você.</li>
                 <li>Admiro profundamente quem você é e a forma como sempre consegue chegar e resolver tudo, não importa o que aconteça.</li>
-                <li>Adoro que, por mais corrida que sua vida seja, você sempre encontra um jeito de me dar atenção.</li>
-                <li>Adoro que falar com você sempre me faz sorrir, você tem esse jeitinho divertido de ver a vida que faz com que eu esqueça até dos meus problemas.</li>
             </ul>
         </div>
 
@@ -338,3 +336,4 @@ Bibu te deseja um ótimo dia! </p>
     </div>
 </body>
 </html>
+
