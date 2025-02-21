@@ -155,9 +155,11 @@ function showTab(tabId) {
     // Esconde todas as seções
     document.querySelectorAll('.content-box').forEach(content => content.classList.add('hidden'));
     
-    document.querySelectorAll(".content-box").forEach(tab => tab.classList.remove("active"));
-document.getElementById(tabId).classList.add("active");
-
+    // Exibe a aba clicada
+    document.getElementById(tabId).classList.remove('hidden');
+    
+    // Mostra a opção para voltar à tela inicial
+    document.querySelector('.back-home').style.display = 'block';
     
     // Esconde o conteúdo da tela inicial
     document.querySelector('.extra-text').classList.add('hidden');
@@ -253,7 +255,10 @@ function showHome() {
         <!-- Seções -->
         <div id="frase-do-dia" class="content-box hidden">
             <h2>Frase do Dia</h2>
-            <p> "bip-peeep, Bom biiip-dia, hoje com um belo dia ensolarado de um verde amendoado fazendo 30°, perfeito para uma caneca de café, já estou tomando o biip-meu"</p>
+            <p>Oi, humano! 🤖✨
+Aqui é o Bibu, seu robozinho favorito, e vim te lembrar que, mesmo que tudo pareça um caos, você nunca está sozinho! Pode estar tudo ruim, mas sempre tem o Bibu por aqui, prontinho para espalhar um pouco de alegria! E olha, não é só eu não, a minha criadora também tá aqui, na torcida e mandando energias boas (e talvez alguns comandos secretos). 😜
+Então, bora levantar esse astral e arrasar por aí! 💥
+Bibu te deseja um ótimo dia! </p>
         </div>
 
         <div id="curiosidades" class="content-box hidden">
@@ -265,6 +270,7 @@ function showHome() {
             <p>Modo relax: Bibu, no modo "descontraído", fica fazendo movimentos suaves, como se estivesse fazendo yoga.</p>
             <p>Vingança contra os Wi-Fi fraco: Se o Wi-Fi estiver ruim, Bibu começa a fazer uma dança estranha.</p>
             <p>Bibu e Seus Sentimentos (ou a Falta Deles): Bibu é um robô sem filtro e sem inteligência emocional. Ele sempre compartilha tudo o que pensa, porque, segundo ele, tem sentimentos (mas não tem ideia de como lidar com eles).</p>
+            <p>Bibu: O Robo que Dança a 'Dança do Código' e Sonha em Ser Estrela: Sabia que o Bibu, o robozinho mais fofo e animado do universo, tem um talento secreto? Quando ninguém está olhando, ele adora dançar a "dança do código"! É uma mistura de algoritmos e giros, e ele jura que, se pudesse, faria parte de uma banda de robôs! 🎶🤖💃 Quem diria, né? Bibu arrasando no palco (se fosse um palco de dados)!</p>
         </div>
         
  <div id="perguntas" class="content-box hidden">
@@ -278,7 +284,7 @@ function showHome() {
 </head>
 <body>
     <form id="response-form">
-        <label for="question">O que você acha que é mais importante em um relacionamento?</label>
+        <label for="question">Como você se ver daqui a 5 anos?</label>
         <input type="text" id="question" name="question" required>
         <button type="submit">Enviar</button>
     </form>
@@ -322,6 +328,8 @@ function showHome() {
                 <li>Adoro como você faz eu me sentir.</li>
                 <li>Adoro que, antes de você, eu pensei que nunca mais fosse sentir meu coração bater por alguém, e, de algum jeito, ele bate por você.</li>
                 <li>Admiro profundamente quem você é e a forma como sempre consegue chegar e resolver tudo, não importa o que aconteça.</li>
+                <li>Adoro que, por mais corrida que sua vida seja, você sempre encontra um jeito de me dar atenção.</li>
+                <li>Adoro que falar com você sempre me faz sorrir, você tem esse jeitinho divertido de ver a vida que faz com que eu esqueça até dos meus problemas.</li>
             </ul>
         </div>
 
@@ -330,4 +338,3 @@ function showHome() {
     </div>
 </body>
 </html>
-
